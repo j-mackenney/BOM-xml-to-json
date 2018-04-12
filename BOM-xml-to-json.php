@@ -45,7 +45,7 @@
 			foreach($area->{'forecast-period'} as $forecast) {
 				// create the forecast
 				$forecast = (object) [
-					'locale' => end($locale),
+					'locale' => end($locales),
 					'startDate' => (string)$forecast['start-time-local'],
 					'endDate' => (string)$forecast['end-time-local'],
 					'iconCode' => (string) current($forecast->xpath('element[@type="forecast_icon_code"]')),
